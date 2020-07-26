@@ -1,0 +1,514 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Be Vietnam', sans-serif;
+    z-index: 0;
+    text-align: center;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+p {
+    color: hsl(227, 12%, 61%);
+    padding: 15px 5% 30px;
+    line-height: 1.7em;
+}
+
+section {
+    padding-bottom: 100px;
+}
+
+.start,
+.go {
+    background-color: hsl(12, 88%, 59%);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    font-weight: 700;
+    box-shadow: 0 10px 10px hsl(12, 88%, 81%);
+    cursor: pointer;
+    transition: 320ms background-color;
+}
+
+.go {
+    box-shadow: none;
+    text-transform: uppercase;
+    padding: 15px 25px;
+}
+
+.start.white {
+    background-color: white;
+    color: hsl(12, 88%, 59%);
+    box-shadow: 0 10px 10px hsl(12, 88%, 50%);
+    padding: 15px 30px;
+    height: fit-content;
+    transition: 320ms color;
+}
+
+.start:focus {
+    outline: none;
+}
+
+.logoSVG {
+    width: 111px;
+    height: 18px;
+}
+
+#mainSection {
+    background-image: url("./images/bg-tablet-pattern.svg");
+    background-repeat: no-repeat;
+    background-position: 10vw -50px;
+    background-size: 100%;
+}
+
+#navBar {
+    padding: 45px 5% 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+#navList,
+#navStart {
+    display: none;
+}
+
+.haburgerIco {
+    cursor: pointer;
+    z-index: 10;
+}
+
+.hamburgerMenu {
+    display: none;
+    background-color: white;
+    width: 100%;
+    margin: 45px auto;
+    padding: 45px 0;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.hamburgerItem {
+    margin-bottom: 15px;
+    font-size: 1em;
+    font-weight: 700;
+    color: hsl(228, 39%, 23%);
+}
+
+.menuBack {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(0, 0, 0);
+    background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 0.5046393557422969) 0%, rgba(0, 0, 0, 0) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.5046393557422969) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5046393557422969) 0%, rgba(0, 0, 0, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=1);
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#mainHeader {
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.headerImg {
+    grid-row: 1/2;
+}
+
+.headerImg img {
+    width: 100%;
+}
+
+.headerContent {
+    grid-row: 2/3;
+}
+
+#headerTitle {
+    font-weight: 700;
+    font-size: 2.5em;
+    line-height: 1.3em;
+    color: hsl(228, 39%, 23%);
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 2em;
+    color: hsl(228, 39%, 23%);
+}
+
+#advantages {
+    padding-bottom: 10px;
+}
+
+.advantagesP {
+    margin-bottom: 30px;
+}
+
+.advantagesDesc h2 {
+    padding: 0 15%;
+}
+
+.numList {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.numListHead {
+    display: flex;
+    align-items: center;
+    background-color: hsl(13, 100%, 96%);
+    margin-left: 5%;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.numberL {
+    background-color: hsl(12, 88%, 59%);
+    color: white;
+    padding: 5px 25px;
+    border: none;
+    border-radius: 25px;
+    font-weight: 700;
+
+}
+
+.numberTitle {
+    margin-left: 5%;
+    font-weight: 700;
+    line-height: 1.3em;
+    color: hsl(228, 39%, 23%);
+}
+
+.numberText {
+    text-align: left;
+    padding: 2% 5% 50px;
+}
+
+#testmentional {
+    padding: 0 5% 10%;
+}
+
+#testmentional h2 {
+    margin-bottom: 100px;
+}
+
+.card {
+    position: relative;
+    margin: 0 35px 50px;
+}
+
+.cardBox{
+    padding-top: 40px;
+}
+
+.cardText {
+    background-color: hsl(0, 0%, 98%);
+    padding-top: 65px;
+}
+
+.avatar{
+    position: relative;
+}
+
+.avatar img {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 70px;
+}
+
+.username {
+    font-weight: 700;
+    color: hsl(228, 39%, 23%);
+}
+
+.dots {
+    margin: 25px auto;
+}
+
+.glider-dot {
+    width: 10px;
+    height: 10px;
+    border: 1px solid hsl(12, 88%, 59%);
+    border-radius: 100%;
+    background-color: white;
+}
+
+.glider-dot.active, .glider-dot:hover {
+    background-color: hsl(12, 88%, 59%);
+}
+
+.glider::-webkit-scrollbar-thumb{
+    display: none;
+}
+
+#getStarted {
+    background-color: hsl(12, 88%, 59%);
+    position: relative;
+    padding: 100px 5%;
+    overflow: hidden;
+}
+
+#getStarted h2 {
+    font-weight: 700;
+    font-size: 2.5em;
+    line-height: 1.3em;
+    color: white;
+    margin-bottom: 25px;
+}
+
+footer {
+    background-color: hsl(233, 12%, 13%);
+    padding: 50px 5% 25px;
+    color: #FFFF;
+}
+
+#mailSub {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+}
+
+input[type="email"] {
+    padding: 15px 20px;
+    border-radius: 30px;
+    border: none;
+    width: 100%;
+    color: hsl(12, 88%, 59%);
+}
+
+input[type="email"]:focus {
+    outline: none;
+    border: 2px solid hsl(12, 88%, 59%);
+}
+
+.errormail{
+    display: none;
+}
+
+.errormail p{
+    color: hsl(12, 88%, 59%);
+    font-size: 1em;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.siteTree ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+    padding: 60px 0;
+}
+
+.siteTree li {
+    padding-left: 50px;
+    font-weight: lighter;
+    line-height: 2em;
+}
+
+.socialIcons {
+    font-size: 2em;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto 55px;
+}
+
+.footerLogo {
+    margin-bottom: 55px;
+}
+
+.copyright {
+    color: hsl(227, 12%, 61%);
+    font-weight: lighter;
+    font-size: 0.9em;
+}
+
+@media screen and (min-width:1024px) {
+    body{
+        text-align: left;
+    }
+
+    button{
+        cursor: pointer;
+    }
+
+    h2 {
+        font-size: 2.5em;
+    }
+
+    .haburgerIco,
+    .hamburgerMenu,
+    .menuBack {
+        display: none;
+    }
+
+    .logoSVG {
+        width: 146px;
+        height: 24px;
+    }
+
+    #navList,
+    #navStart {
+        display: inline;
+    }
+
+    #navList{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #navList > li{
+        margin-right: 30px;
+        color: hsl(228, 39%, 23%);
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    #navList > li:hover{
+        color: hsl(227, 12%, 61%);
+
+    }
+
+    .start:hover,
+.go:hover {
+    background-color: hsl(12, 88%, 75%);
+}
+
+.start.white:hover {
+    background-color: white;
+    color: hsl(12, 88%, 75%);
+}
+
+#mainSection {
+    background-position: 55vw -100px;
+    background-size: 50%;
+}
+
+
+#mainHeader{
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 120px;
+}
+
+.headerContent{
+    grid-row: 1/2;
+}
+
+#headerTitle {
+    font-size: 3.5em;
+}
+
+#headerDesc{
+    padding-left: 0;
+    font-size: 1.5em;
+}
+
+#advantages{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 5%;
+}
+
+.advantagesP{
+    width: 60%;
+}
+
+.advantagesDesc h2, .advantagesDesc p{
+    padding-left: 0;
+}
+
+.numListHead {
+    background-color: white;
+}
+
+.numberText{
+    padding-left: 130px;
+}
+
+#testmentional{
+    text-align: center;
+    padding: 0;
+    padding-bottom: 10%;
+}
+
+#getStarted{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 5%;
+}
+
+#getStarted h2{
+    width: 50%;
+}
+
+footer{
+    display: grid;
+    grid-template-areas: 
+    "logo tree mail"
+    "social tree copyright";
+    grid-template-columns: 1fr 3fr 2fr;
+    column-gap: 120px;
+}
+
+.subscribe{
+    grid-area: mail;
+}
+
+.siteTree{
+    grid-area: tree;
+}
+.siteTree ul, .siteTree li{
+    padding: 0;
+}
+
+.socialIcons{
+    grid-area: social;
+    width: 100%;
+    font-size: 1.5em;
+}
+
+.socialIcons i, .siteTree li{
+    cursor: pointer;
+    transition: 320ms color;
+}
+
+.socialIcons i:hover, .siteTree li:hover{
+    color: hsl(12, 88%, 59%);
+}
+
+.footerLogo{
+    grid-area: logo;
+}
+
+.footerLogo svg{
+    width: 100%;
+    height: 100%;
+}
+
+
+.copyright{
+    grid-area: copyright;
+    justify-self: end;
+}
+
+}
